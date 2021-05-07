@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-// 车轮
+// Wheel 车轮
 type Wheel struct {
 	Size int
 }
 
-// 车
+// Car 车
 type Car struct {
 	Wheel
 	// 引擎

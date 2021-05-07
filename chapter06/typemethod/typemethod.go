@@ -4,15 +4,15 @@ import (
 	"fmt"
 )
 
-// 将int定义为MyInt类型
+// MyInt 将int定义为MyInt类型
 type MyInt int
 
-// 为MyInt定义IsZero方法
+// IsZero 为MyInt定义IsZero方法
 func (m MyInt) IsZero() bool {
 	return m == 0
 }
 
-// 为MyInt添加Add方法
+// Add 为MyInt添加Add方法
 func (m MyInt) Add(other int) int {
 	return other + int(m)
 }

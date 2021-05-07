@@ -10,7 +10,7 @@ var (
 	seq int64
 )
 
-// 序列号生成器
+// GenID 序列号生成器
 func GenID() int64 {
 
 	// 尝试原子的增加序列号

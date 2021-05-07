@@ -4,22 +4,22 @@ import (
 	"fmt"
 )
 
-// 闲置状态
+// IdleState 闲置状态
 type IdleState struct {
 	StateInfo // 使用StateInfo实现基础接口
 }
 
-// 重新实现状态开始
+// OnBegin 重新实现状态开始
 func (i *IdleState) OnBegin() {
 	fmt.Println("IdleState begin")
 }
 
-// 重新实现状态结束
+// OnEnd 重新实现状态结束
 func (i *IdleState) OnEnd() {
 	fmt.Println("IdleState end")
 }
 
-// 移动状态
+// MoveState 移动状态
 type MoveState struct {
 	StateInfo
 }
@@ -28,12 +28,12 @@ func (m *MoveState) OnBegin() {
 	fmt.Println("MoveState begin")
 }
 
-// 允许移动状态互相转换
+// EnableSameTransit 允许移动状态互相转换
 func (m *MoveState) EnableSameTransit() bool {
 	return true
 }
 
-// 跳跃状态
+// JumpState 跳跃状态
 type JumpState struct {
 	StateInfo
 }
@@ -42,7 +42,7 @@ func (j *JumpState) OnBegin() {
 	fmt.Println("JumpState begin")
 }
 
-// 跳跃状态不能转移到移动状态
+// CanTransitTo 跳跃状态不能转移到移动状态
 func (j *JumpState) CanTransitTo(name string) bool {
 	return name != "MoveState"
 }

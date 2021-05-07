@@ -10,7 +10,7 @@ type panicContext struct {
 	function string // 所在函数
 }
 
-// 保护方式允许一个函数
+// ProtectRun 保护方式允许一个函数
 func ProtectRun(entry func()) {
 
 	// 延迟处理的函数

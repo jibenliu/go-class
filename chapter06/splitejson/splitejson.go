@@ -5,13 +5,13 @@ import (
 	"fmt"
 )
 
-// 定义手机屏幕
+// Screen 定义手机屏幕
 type Screen struct {
 	Size       float32 // 屏幕尺寸
 	ResX, ResY int     // 屏幕水平和垂直分辨率
 }
 
-// 定义电池
+// Battery 定义电池
 type Battery struct {
 	Capacity int // 容量
 }

@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-// 声明英雄种类类型
+// HeroKind 声明英雄种类类型
 type HeroKind int
 
 // 定义HeroKind常量，类似于枚举
@@ -16,21 +16,21 @@ const (
 	Mage
 )
 
-// 定义英雄结构的结构
+// Hero 定义英雄结构的结构
 type Hero struct {
 	Name string   // 英雄的名字
 	Kind HeroKind // 英雄的种类
 }
 
-// 将英雄指针的切片定义为Heros类型
+// Heros 将英雄指针的切片定义为Heros类型
 type Heros []*Hero
 
-// 实现sort.Interface接口取元素数量方法
+// Len 实现sort.Interface接口取元素数量方法
 func (s Heros) Len() int {
 	return len(s)
 }
 
-// 实现sort.Interface接口比较元素方法
+// Less 实现sort.Interface接口比较元素方法
 func (s Heros) Less(i, j int) bool {
 
 	if s[i].Kind != s[j].Kind {
@@ -40,7 +40,7 @@ func (s Heros) Less(i, j int) bool {
 	return s[i].Name < s[j].Name
 }
 
-// 实现sort.Interface接口交换元素方法
+// Swap 实现sort.Interface接口交换元素方法
 func (s Heros) Swap(i, j int) {
 	s[i], s[j] = s[j], s[i]
 }

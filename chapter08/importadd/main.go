@@ -1,7 +1,7 @@
 package main
 
 import (
-	renameLib "class/chapter08/importadd/mylib"
+	renameLib "chapter08/importadd/mylib"
 	"fmt"
 )
 

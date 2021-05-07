@@ -1,15 +1,15 @@
 package cls2
 
 import (
-	"class/chapter08/clsfactory/base"
+	"chapter08/clsfactory/base"
 	"fmt"
 )
 
-// 类2
+// Class2 类2
 type Class2 struct {
 }
 
-// 实现Class接口
+// Do 实现Class接口
 func (c *Class2) Do() {
 	fmt.Println("Class2")
 }

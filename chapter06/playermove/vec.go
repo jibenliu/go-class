@@ -6,7 +6,7 @@ type Vec2 struct {
 	X, Y float32
 }
 
-// 加
+// Add 加
 func (v Vec2) Add(other Vec2) Vec2 {
 
 	return Vec2{
@@ -16,7 +16,7 @@ func (v Vec2) Add(other Vec2) Vec2 {
 
 }
 
-// 减
+// Sub 减
 func (v Vec2) Sub(other Vec2) Vec2 {
 
 	return Vec2{
@@ -25,13 +25,13 @@ func (v Vec2) Sub(other Vec2) Vec2 {
 	}
 }
 
-// 乘
+// Scale 乘
 func (v Vec2) Scale(s float32) Vec2 {
 
 	return Vec2{v.X * s, v.Y * s}
 }
 
-// 距离
+// DistanceTo 距离
 func (v Vec2) DistanceTo(other Vec2) float32 {
 	dx := v.X - other.X
 	dy := v.Y - other.Y
@@ -39,7 +39,7 @@ func (v Vec2) DistanceTo(other Vec2) float32 {
 	return float32(math.Sqrt(float64(dx*dx + dy*dy)))
 }
 
-// 插值
+// Normalize 插值
 func (v Vec2) Normalize() Vec2 {
 	mag := v.X*v.X + v.Y*v.Y
 	if mag > 0 {

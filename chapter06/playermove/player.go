@@ -6,25 +6,25 @@ type Player struct {
 	speed     float32 // 移动速度
 }
 
-// 移动到某个点就是设置目标位置
+// MoveTo 移动到某个点就是设置目标位置
 func (p *Player) MoveTo(v Vec2) {
 
 	p.targetPos = v
 }
 
-// 获取当前的位置
+// Pos 获取当前的位置
 func (p *Player) Pos() Vec2 {
 	return p.currPos
 }
 
-// 是否到达
+// IsArrived 是否到达
 func (p *Player) IsArrived() bool {
 
 	// 通过计算当前玩家位置与目标位置的距离不超过移动的步长，判断已经到达目标点
 	return p.currPos.DistanceTo(p.targetPos) < p.speed
 }
 
-// 逻辑更新
+// Update 逻辑更新
 func (p *Player) Update() {
 
 	if !p.IsArrived() {
@@ -41,7 +41,7 @@ func (p *Player) Update() {
 
 }
 
-// 创建新玩家
+// NewPlayer 创建新玩家
 func NewPlayer(speed float32) *Player {
 
 	return &Player{

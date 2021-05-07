@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// 模拟RPC客户端的请求和接收消息封装
+// RPCClient 模拟RPC客户端的请求和接收消息封装
 func RPCClient(ch chan string, req string) (string, error) {
 
 	// 向服务器发送请求
@@ -21,7 +21,7 @@ func RPCClient(ch chan string, req string) (string, error) {
 	}
 }
 
-// 模拟RPC服务器端接收客户端请求和回应
+// RPCServer 模拟RPC服务器端接收客户端请求和回应
 func RPCServer(ch chan string) {
 	for {
 		// 接收客户端请求

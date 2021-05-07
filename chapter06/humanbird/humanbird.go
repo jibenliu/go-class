@@ -2,26 +2,26 @@ package main
 
 import "fmt"
 
-// 可飞行的
+// Flying 可飞行的
 type Flying struct{}
 
 func (f *Flying) Fly() {
 	fmt.Println("can fly")
 }
 
-// 可行走的
+// Walkable 可行走的
 type Walkable struct{}
 
 func (f *Walkable) Walk() {
 	fmt.Println("can calk")
 }
 
-// 人类
+// Human 人类
 type Human struct {
 	Walkable // 人类能行走
 }
 
-// 鸟类
+// Bird 鸟类
 type Bird struct {
 	Walkable // 鸟类能行走
 	Flying   // 鸟类能飞行

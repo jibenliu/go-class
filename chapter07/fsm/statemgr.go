@@ -2,16 +2,16 @@ package main
 
 import "errors"
 
-// 状态没有找到的错误
+// ErrStateNotFound 状态没有找到的错误
 var ErrStateNotFound = errors.New("state not found")
 
-// 禁止在同状态间转移
+// ErrForbidSameStateTransit 禁止在同状态间转移
 var ErrForbidSameStateTransit = errors.New("forbid same state transit")
 
-// 不能转移到指定状态
+// ErrCannotTransitToState 不能转移到指定状态
 var ErrCannotTransitToState = errors.New("cannot transit to state")
 
-// 状态管理器
+// StateManager 状态管理器
 type StateManager struct {
 
 	// 已经添加的状态
@@ -24,7 +24,7 @@ type StateManager struct {
 	curr State
 }
 
-// 添加一个状态到管理器
+// Add 添加一个状态到管理器
 func (sm *StateManager) Add(s State) {
 
 	// 获取状态的名称
@@ -44,7 +44,7 @@ func (sm *StateManager) Add(s State) {
 	sm.stateByName[name] = s
 }
 
-// 根据名字获取指定状态
+// Get 根据名字获取指定状态
 func (sm *StateManager) Get(name string) State {
 
 	if v, ok := sm.stateByName[name]; ok {
@@ -54,12 +54,12 @@ func (sm *StateManager) Get(name string) State {
 	return nil
 }
 
-// 获取当前的状态
+// CurrState 获取当前的状态
 func (sm *StateManager) CurrState() State {
 	return sm.curr
 }
 
-// 当前状态能否转移到目标状态
+// CanCurrTransitTo 当前状态能否转移到目标状态
 func (sm *StateManager) CanCurrTransitTo(name string) bool {
 
 	if sm.curr == nil {
@@ -75,7 +75,7 @@ func (sm *StateManager) CanCurrTransitTo(name string) bool {
 	return sm.curr.CanTransitTo(name)
 }
 
-// 转移到指定状态
+// Transit 转移到指定状态
 func (sm *StateManager) Transit(name string) error {
 
 	// 获取目标状态
@@ -120,7 +120,7 @@ func (sm *StateManager) Transit(name string) error {
 	return nil
 }
 
-// 初始化状态管理器
+// NewStateManager 初始化状态管理器
 func NewStateManager() *StateManager {
 	return &StateManager{
 		stateByName: make(map[string]State),

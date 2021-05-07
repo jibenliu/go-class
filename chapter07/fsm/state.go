@@ -4,26 +4,26 @@ import (
 	"reflect"
 )
 
-// 状态接口
+// State 状态接口
 type State interface {
 
-	// 获取状态名字
+	// Name 获取状态名字
 	Name() string
 
-	// 该状态是否允许同状态转移
+	// EnableSameTransit 该状态是否允许同状态转移
 	EnableSameTransit() bool
 
-	// 响应状态开始时
+	// OnBegin 响应状态开始时
 	OnBegin()
 
-	// 响应状态结束时
+	// OnEnd 响应状态结束时
 	OnEnd()
 
-	// 判断能否转移到某状态
+	// CanTransitTo 判断能否转移到某状态
 	CanTransitTo(name string) bool
 }
 
-// 从状态实例获取状态名
+// StateName 从状态实例获取状态名
 func StateName(s State) string {
 	if s == nil {
 		return "none"

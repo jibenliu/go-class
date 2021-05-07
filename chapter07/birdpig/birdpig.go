@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-// 飞行物接口
+// Flyer 飞行物接口
 type Flyer interface {
 	Fly()
 }
 
-// 行走物接口
+// Walker 行走物接口
 type Walker interface {
 	Walk()
 }
@@ -16,12 +16,12 @@ type Walker interface {
 type bird struct {
 }
 
-// 实现飞行接口
+// Fly 实现飞行接口
 func (b *bird) Fly() {
 	fmt.Println("bird: fly")
 }
 
-// 实现行走接口
+// Walk 实现行走接口
 func (b *bird) Walk() {
 	fmt.Println("bird: walk")
 }
@@ -30,7 +30,7 @@ func (b *bird) Walk() {
 type pig struct {
 }
 
-// 实现行走接口
+// Walk 实现行走接口
 func (p *pig) Walk() {
 	fmt.Println("pig: walk")
 }

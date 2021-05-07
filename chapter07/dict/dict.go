@@ -2,23 +2,23 @@ package main
 
 import "fmt"
 
-// 字典结构
+// Dictionary 字典结构
 type Dictionary struct {
 	data map[interface{}]interface{} // 键值都为interface{}类型
 }
 
-// 根据键获取值
+// Get 根据键获取值
 func (d *Dictionary) Get(key interface{}) interface{} {
 	return d.data[key]
 }
 
-// 设置键值
+// Set 设置键值
 func (d *Dictionary) Set(key interface{}, value interface{}) {
 
 	d.data[key] = value
 }
 
-// 遍历所有的键值，如果回调返回值为false，停止遍历
+// Visit 遍历所有的键值，如果回调返回值为false，停止遍历
 func (d *Dictionary) Visit(callback func(k, v interface{}) bool) {
 
 	if callback == nil {
@@ -32,12 +32,12 @@ func (d *Dictionary) Visit(callback func(k, v interface{}) bool) {
 	}
 }
 
-// 清空所有的数据
+// Clear 清空所有的数据
 func (d *Dictionary) Clear() {
 	d.data = make(map[interface{}]interface{})
 }
 
-// 创建一个字典
+// NewDictionary 创建一个字典
 func NewDictionary() *Dictionary {
 	d := &Dictionary{}
 

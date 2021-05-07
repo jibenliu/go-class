@@ -6,7 +6,7 @@ import "fmt"
 type class struct {
 }
 
-// 给结构体添加Do方法
+// Do 给结构体添加Do方法
 func (c *class) Do(v int) {
 
 	fmt.Println("call method do:", v)

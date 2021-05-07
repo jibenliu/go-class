@@ -9,6 +9,7 @@ import (
 func main() {
 
 	// 根据字符串动态创建一个Class1实例
+
 	c1 := base.Create("Class1")
 	c1.Do()
 

@@ -14,7 +14,7 @@ func rawPrint(rawList ...interface{}) {
 }
 
 // 打印函数封装
-func print(slist ...interface{}) {
+func p(slist ...interface{}) {
 
 	// 将slist可变参数切片完整传递给下一个函数
 	rawPrint(slist...)
@@ -22,5 +22,5 @@ func print(slist ...interface{}) {
 
 func main() {
 
-	print(1, 2, 3)
+	p(1, 2, 3)
 }

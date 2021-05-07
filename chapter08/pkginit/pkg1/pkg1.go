@@ -1,7 +1,7 @@
 package pkg1
 
 import (
-	"class/chapter08/pkginit/pkg2"
+	"chapter08/pkginit/pkg2"
 	"fmt"
 )
 

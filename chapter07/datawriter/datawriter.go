@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// 定义一个数据写入器
+// DataWriter 定义一个数据写入器
 type DataWriter interface {
 	WriteData(data interface{}) error
 }
@@ -13,7 +13,7 @@ type DataWriter interface {
 type file struct {
 }
 
-// 实现DataWriter接口的WriteData方法
+// WriteData 实现DataWriter接口的WriteData方法
 func (d *file) WriteData(data interface{}) error {
 
 	// 模拟写入数据

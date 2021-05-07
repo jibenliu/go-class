@@ -5,20 +5,20 @@ import (
 	"sort"
 )
 
-// 将[]string定义为MyStringList类型
+// MyStringList 将[]string定义为MyStringList类型
 type MyStringList []string
 
-// 实现sort.Interface接口的获取元素数量方法
+// Len 实现sort.Interface接口的获取元素数量方法
 func (m MyStringList) Len() int {
 	return len(m)
 }
 
-// 实现sort.Interface接口的比较元素方法
+// Less 实现sort.Interface接口的比较元素方法
 func (m MyStringList) Less(i, j int) bool {
 	return m[i] < m[j]
 }
 
-// 实现sort.Interface接口的交换元素方法
+// Swap 实现sort.Interface接口的交换元素方法
 func (m MyStringList) Swap(i, j int) {
 	m[i], m[j] = m[j], m[i]
 }

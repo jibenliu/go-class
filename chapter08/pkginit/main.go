@@ -1,6 +1,6 @@
 package main
 
-import "class/chapter08/pkginit/pkg1"
+import "chapter08/pkginit/pkg1"
 
 func main() {
 

@@ -11,7 +11,7 @@ type fileWriter struct {
 	file *os.File
 }
 
-// 设置文件写入器写入的文件名
+// SetFile 设置文件写入器写入的文件名
 func (f *fileWriter) SetFile(filename string) (err error) {
 
 	// 如果文件已经打开，关闭前一个文件

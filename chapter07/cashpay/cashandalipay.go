@@ -2,19 +2,19 @@ package main
 
 import "fmt"
 
-// 电子支付方式
+// Alipay 电子支付方式
 type Alipay struct {
 }
 
-// 为Alipay添加CanUseFaceID方法，表示电子支付方式支持刷脸
+// CanUseFaceID 为Alipay添加CanUseFaceID方法，表示电子支付方式支持刷脸
 func (a *Alipay) CanUseFaceID() {
 }
 
-// 现金支付方式
+// Cash 现金支付方式
 type Cash struct {
 }
 
-// 为Cash添加Stolen方法，表示现金支付方式会出现偷窃情况
+// Stolen 为Cash添加Stolen方法，表示现金支付方式会出现偷窃情况
 func (a *Cash) Stolen() {
 }
 
@@ -27,7 +27,7 @@ type ContainStolen interface {
 }
 
 // 打印支付方式具备的特点
-func print(payMethod interface{}) {
+func p(payMethod interface{}) {
 	switch payMethod.(type) {
 	case ContainCanUseFaceID: // 可以刷脸
 		fmt.Printf("%T can use faceid\n", payMethod)
@@ -39,8 +39,8 @@ func print(payMethod interface{}) {
 func main() {
 
 	// 使用电子支付判断
-	print(new(Alipay))
+	p(new(Alipay))
 
 	// 使用现金判断
-	print(new(Cash))
+	p(new(Cash))
 }

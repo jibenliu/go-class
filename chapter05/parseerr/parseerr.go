@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// 声明一个解析错误
+// ParseError 声明一个解析错误
 type ParseError struct {
 	Filename string // 文件名
 	Line     int    // 行号

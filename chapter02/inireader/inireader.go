@@ -30,35 +30,35 @@ func getValue(filename, expectSection, expectKey string) string {
 	for {
 
 		// 读取文件的一行
-		linestr, err := reader.ReadString('\n')
+		lineStr, err := reader.ReadString('\n')
 		if err != nil {
 			break
 		}
 
 		// 切掉行的左右两边的空白字符
-		linestr = strings.TrimSpace(linestr)
+		lineStr = strings.TrimSpace(lineStr)
 
 		// 忽略空行
-		if linestr == "" {
+		if lineStr == "" {
 			continue
 		}
 
 		// 忽略注释
-		if linestr[0] == ';' {
+		if lineStr[0] == ';' {
 			continue
 		}
 
 		// 行首和尾巴分别是方括号的，说明是段标记的起止符
-		if linestr[0] == '[' && linestr[len(linestr)-1] == ']' {
+		if lineStr[0] == '[' && lineStr[len(lineStr)-1] == ']' {
 
 			// 将段名取出
-			sectionName = linestr[1 : len(linestr)-1]
+			sectionName = lineStr[1 : len(lineStr)-1]
 
 			// 这个段是希望读取的
 		} else if sectionName == expectSection {
 
 			// 切开等号分割的键值对
-			pair := strings.Split(linestr, "=")
+			pair := strings.Split(lineStr, "=")
 
 			// 保证切开只有1个等号分割的简直情况
 			if len(pair) == 2 {

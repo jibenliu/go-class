@@ -2,16 +2,16 @@ package main
 
 import "fmt"
 
-// 用于测试值传递效果的结构体
+// Data 用于测试值传递效果的结构体
 type Data struct {
-	complax []int // 测试切片在参数传递中的效果
+	complex []int // 测试切片在参数传递中的效果
 
 	instance InnerData // 实例分配的innerData
 
 	ptr *InnerData // 将ptr声明为InnerData的指针类型
 }
 
-// 代表各种结构体字段
+// InnerData 代表各种结构体字段
 type InnerData struct {
 	a int
 }
@@ -32,7 +32,7 @@ func main() {
 
 	// 准备传入函数的结构
 	in := Data{
-		complax: []int{1, 2, 3},
+		complex: []int{1, 2, 3},
 		instance: InnerData{
 			5,
 		},

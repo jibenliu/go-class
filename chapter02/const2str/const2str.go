@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// 声明芯片类型
+// ChipType 声明芯片类型
 type ChipType int
 
 const (

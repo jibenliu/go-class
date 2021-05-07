@@ -2,17 +2,17 @@ package main
 
 import "fmt"
 
-// 声明角色的结构体
+// Actor 声明角色的结构体
 type Actor struct {
 }
 
-// 为角色添加一个事件处理函数
+// OnEvent 为角色添加一个事件处理函数
 func (a *Actor) OnEvent(param interface{}) {
 
 	fmt.Println("actor event:", param)
 }
 
-// 全局事件
+// GlobalEvent 全局事件
 func GlobalEvent(param interface{}) {
 
 	fmt.Println("global event:", param)
