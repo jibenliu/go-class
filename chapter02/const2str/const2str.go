@@ -25,7 +25,6 @@ func (c ChipType) String() string {
 }
 
 func main() {
-
 	// 输出CPU的值和以整形方式显示
 	fmt.Printf("%s %d", CPU, CPU)
 }

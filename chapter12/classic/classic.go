@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Profile struct {
 	Name    string
@@ -18,7 +20,6 @@ func simpleHash(str string) (ret int) {
 		// 将字符的ASCII码相加
 		ret += int(c)
 	}
-
 	return
 }
 
