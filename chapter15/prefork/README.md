@@ -1,0 +1,1 @@
+#refer:[https://colobu.com/2016/05/03/use-prefork-and-affinity-in-Go/](https://colobu.com/2016/05/03/use-prefork-and-affinity-in-Go/)

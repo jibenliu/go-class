@@ -1,0 +1,6 @@
+# github.com/eapache/channels v1.1.0
+## explicit
+github.com/eapache/channels
+# github.com/eapache/queue v1.1.0
+## explicit
+github.com/eapache/queue

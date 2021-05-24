@@ -1,0 +1,34 @@
+goos: linux
+goarch: amd64
+cpu: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+Benchmark_Add-16                 	1000000000	         0.2189 ns/op
+Benchmark_Add-16                 	1000000000	         0.2179 ns/op
+Benchmark_Add-16                 	1000000000	         0.2194 ns/op
+Benchmark_Add-16                 	1000000000	         0.2172 ns/op
+Benchmark_Add-16                 	1000000000	         0.2200 ns/op
+Benchmark_Add-16                 	1000000000	         0.2286 ns/op
+Benchmark_Add-16                 	1000000000	         0.2220 ns/op
+Benchmark_Add-16                 	1000000000	         0.2206 ns/op
+Benchmark_Add-16                 	1000000000	         0.2249 ns/op
+Benchmark_Add-16                 	1000000000	         0.2181 ns/op
+Benchmark_Add_TimerControl-16    	1000000000	         0.2191 ns/op
+Benchmark_Add_TimerControl-16    	1000000000	         0.2177 ns/op
+Benchmark_Add_TimerControl-16    	1000000000	         0.2196 ns/op
+Benchmark_Add_TimerControl-16    	1000000000	         0.2191 ns/op
+Benchmark_Add_TimerControl-16    	1000000000	         0.2192 ns/op
+Benchmark_Add_TimerControl-16    	1000000000	         0.2174 ns/op
+Benchmark_Add_TimerControl-16    	1000000000	         0.2181 ns/op
+Benchmark_Add_TimerControl-16    	1000000000	         0.2179 ns/op
+Benchmark_Add_TimerControl-16    	1000000000	         0.2188 ns/op
+Benchmark_Add_TimerControl-16    	1000000000	         0.2189 ns/op
+Benchmark_Alloc-16               	17104790	        72.62 ns/op
+Benchmark_Alloc-16               	16650044	        73.91 ns/op
+Benchmark_Alloc-16               	16729392	        72.75 ns/op
+Benchmark_Alloc-16               	16624056	        71.71 ns/op
+Benchmark_Alloc-16               	16729592	        75.59 ns/op
+Benchmark_Alloc-16               	15696300	        75.52 ns/op
+Benchmark_Alloc-16               	16179710	        74.22 ns/op
+Benchmark_Alloc-16               	16431112	        77.40 ns/op
+Benchmark_Alloc-16               	16976703	        73.12 ns/op
+Benchmark_Alloc-16               	16479624	        73.47 ns/op
+PASS
